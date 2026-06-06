@@ -76,6 +76,7 @@ def get_user_menu_state(user_id: int) -> dict:
         show_trial_button = False  # Скрываем после активации
     elif trial_used and not subscription:
         # Пробный был, но истёк - показываем кнопку
+            show_trial_button = True
 
     return {
         'has_trial_used': trial_used,
